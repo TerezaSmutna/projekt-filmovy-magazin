@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import movies from '../../movie-database.js'
-import { useParams } from 'react-router-dom';
+import { generatePath, useParams } from 'react-router-dom';
 
 const Movie = () => {
 
@@ -13,11 +13,20 @@ const Movie = () => {
 
   return (
     <div>
-        <>
-          <img src={movie.poster} alt={movie.title} />
-          <h2>{movie.title}</h2>
-          <p>{movie.storyline}</p>
-        </>
+      <div className="movie">
+        <img src={movie.poster} alt={movie.title} />
+        <h2>{movie.title}</h2>
+        <p>{movie.storyline}</p>
+        <div>{movie.year}</div>
+        <div>{movie.genre}</div>
+        <div>{movie.rating}</div>
+        <div>{movie.director}</div>
+        <div>
+          {movie.cast.map((cast) => (
+            <li key={cast.as}>{cast.name} jako {cast.as}</li>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

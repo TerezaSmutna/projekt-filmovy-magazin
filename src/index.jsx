@@ -19,11 +19,20 @@ createRoot(
   document.querySelector('#app'),
 ).render(<App />);
 
+const ErrorPage = () => {
+  return (
+    <main>
+      <h2>Error 404</h2>
+      <p>Pravděpodobně máte špatnou adresu.</p>
+    </main>
+  );
+}
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

@@ -7,7 +7,7 @@ const Movies = () => {
 
   return (
     <div className="movies">
-        <h1>Movies</h1>
+        <h2>Movies</h2>
           <MovieList />
           <Outlet />
     </div>

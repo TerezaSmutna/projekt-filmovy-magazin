@@ -3,3 +3,8 @@
 	align-items: start;
 	gap: 2rem;
 }
+
+.movies {
+  display: flex;
+  direction: column;
+}

@@ -2,19 +2,22 @@ import React from 'react';
 import './style.css';
 import movies from '../../movie-database.js'
 import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const MovieList = () => {
 
   return (
-    <div>
+    <div className="movieList">
       <nav>
-        {movies.map((movie) => <Link
-          style={{ display: 'block', margin: '1rem 0' }}
+        {movies.map((movie) => <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? 'violet' : 'black', display: 'block', margin: '1rem 0'
+          })}
           to={`/movies/${movie.id}`}
           key={movie.id}
         >
           {movie.title}
-        </Link>)}
+          </NavLink>)}
       </nav>
     </div>
   );
