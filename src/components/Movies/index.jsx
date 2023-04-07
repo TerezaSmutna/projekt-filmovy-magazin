@@ -7,9 +7,9 @@ const Movies = () => {
 
   return (
     <div className="movies">
-        <h2>Movies</h2>
-          <MovieList />
-          <Outlet />
+      <h2 className="movies_h2">Movies</h2>
+      <MovieList />
+      <Outlet />
     </div>
   );
 };

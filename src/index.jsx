@@ -15,10 +15,6 @@ const App = () => {
   );
 };
 
-createRoot(
-  document.querySelector('#app'),
-).render(<App />);
-
 const ErrorPage = () => {
   return (
     <main>

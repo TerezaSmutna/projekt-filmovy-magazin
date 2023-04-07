@@ -1,13 +1,12 @@
 import React from 'react';
 import './style.css';
-import { Link, Outlet } from 'react-router-dom';
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from 'react-router-dom';
 
 const Menu = () => {
 
   return (
     <div>
-      <h1>Filmová databáze</h1>
+      <h1>Movies database</h1>
       <nav>
         <NavLink to="/" style={({ isActive }) => ({
           color: isActive ? 'greenyellow' : 'black'

@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import movies from '../../movie-database.js'
-import { Link } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 
 const MovieList = () => {
@@ -17,7 +16,7 @@ const MovieList = () => {
           key={movie.id}
         >
           {movie.title}
-          </NavLink>)}
+        </NavLink>)}
       </nav>
     </div>
   );
